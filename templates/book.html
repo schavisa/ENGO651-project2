@@ -30,7 +30,11 @@
             </tr>
             <tr>
                 <td>User rating:</td>
-                <td>{{ average_rating }} / 5</td>
+                {% if average_rating == "No Rating" %}
+                    <td>{{ average_rating }}</td>
+                {% else %}
+                    <td>{{ average_rating }} / 5</td>
+                {% endif %}
             </tr>
             <tr>
                 <td>User reviews:</td>
