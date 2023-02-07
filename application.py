@@ -180,6 +180,9 @@ def book(isbn):
     reviews = db.execute(text(f"SELECT review, username, rating FROM reviews WHERE reviews.book_isbn = '{isbn}'")).fetchall()
     db.commit()
 
+    if book is None:
+        abort(404)
+
     try:
         # Get info from google book api
         res = requests.get("https://www.googleapis.com/books/v1/volumes", params={"q": f"isbn:{isbn}"})
