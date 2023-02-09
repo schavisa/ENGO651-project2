@@ -20,7 +20,7 @@ Our app also includes an API accessible via the `/api/<isbn>` route, where `<isb
         "averageRating": "Rating" 
         }
 
-If a field is not available, `Null` will be returned for that field.  If the requested ISBN is invalid or the book is not available in our database, a 404 error will be raised.
+Here, the 13-digit ISBN, review count, and average rating are obtained from the Google Books API, and the rest is extracted from our database.  If a field is not available, `Null` will be returned for that field.  If the requested ISBN is invalid or the book is not available in our database, a 404 error will be raised.
 
 ## File descriptions
 
