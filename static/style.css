@@ -146,6 +146,12 @@ input[type='submit'] {
     font-size: 16pt;
 }
 
+td > div {
+    width: 442px; 
+    word-wrap: break-word; 
+    white-space: pre-wrap;
+}
+
 /* Style the sign-in/sign-up pages */
 .layout-body {
     width: 100%;
